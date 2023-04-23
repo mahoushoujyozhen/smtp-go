@@ -1,29 +1,29 @@
 package main
 
 import (
-	"email/email"
+	"email/smtpEmail"
 	"fmt"
 )
 
 func main() {
 	fmt.Println("main")
-	//email.SendEmail()
+	//smtpEmail.SendEmail()
 	receivers := []string{"389403710@qq.com"}
 	subject := "我是主题"
 	body := "你好呀，很高兴见到你，我是body"
 	attach := "./hello.txt"
-	msg := &email.Message{
+	msg := &smtpEmail.Message{
 		Subject: subject,
 		Body:    body,
 		Attach:  attach,
 	}
-	emailInfo := &email.Email{
+	emailInfo := &smtpEmail.Email{
 		SMTPHost: "smtp.qq.com",
 		SMTPPort: 587,
 		From:     "389403710@qq.com",
-		Password: "123456",
+		Password: "12345",
 		To:       receivers,
 		Msg:      msg,
 	}
-	email.SendEmail(emailInfo)
+	smtpEmail.SendEmail(emailInfo)
 }

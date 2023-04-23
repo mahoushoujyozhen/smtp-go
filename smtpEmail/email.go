@@ -1,4 +1,4 @@
-package email
+package smtpEmail
 
 import (
 	"fmt"
@@ -32,5 +32,5 @@ func SendEmail(email *Email) {
 		fmt.Println(err.Error())
 		return
 	}
-	fmt.Println("email send success!")
+	fmt.Println("smtpEmail send success!")
 }
