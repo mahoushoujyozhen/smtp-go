@@ -21,7 +21,7 @@ func main() {
 		SMTPHost: "smtp.qq.com",
 		SMTPPort: 587,
 		From:     "389403710@qq.com",
-		Password: "sybagzuwgjstbjgi",
+		Password: "666666666",
 		To:       receivers,
 		Msg:      msg,
 	}
