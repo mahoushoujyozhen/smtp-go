@@ -62,7 +62,7 @@ func RanInt(min, max int) int {
 
 func Send(args []*string) (_err error) {
 	// 工程代码泄露可能会导致AccessKey泄露，并威胁账号下所有资源的安全性。以下代码示例仅供参考，建议使用更安全的 STS 方式，更多鉴权访问方式请参见：https://help.aliyun.com/document_detail/378661.html
-	client, _err := CreateClient(tea.String("accessKeyId"), tea.String("accessKeySecret"))
+	client, _err := CreateClient(tea.String("LTAI5tNxouxVRX34Ay9LBcZA"), tea.String("gRxctqPtzRjoB7ToHZyvWgiLyNCEvT"))
 	if _err != nil {
 		return _err
 	}
